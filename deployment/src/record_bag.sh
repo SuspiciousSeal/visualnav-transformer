@@ -25,6 +25,8 @@ tmux send-keys "rosrun teleop_twist_keyboard teleop_twist_keyboard.py" Enter
 
 # Change the directory to ../topomaps/bags and run the rosbag record command in the third pane
 tmux select-pane -t 2
+tmux send-keys "source ../../../catkin_ws/devel/setup.bash" Enter
+tmux send-keys "source ../../../rosvar.bash" Enter
 tmux send-keys "cd ../topomaps/bags" Enter
 tmux send-keys "rosbag record /camera/color/image_raw -o $1" # change topic if necessary
 

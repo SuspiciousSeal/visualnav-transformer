@@ -18,7 +18,7 @@ tmux send-keys "roslaunch vint_jackal_remote.launch" Enter
 
 # Run the teleop.py script in the second pane
 tmux select-pane -t 1
-tmux send-keys "conda activate vint_deployment" Enter
+tmux send-keys "conda activate nomad_train" Enter
 tmux send-keys "source ../../../catkin_ws/devel/setup.bash" Enter
 tmux send-keys "source ../../../rosvar.bash" Enter
 tmux send-keys "rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=cmd_vel_mux/input/teleop" Enter

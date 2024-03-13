@@ -61,6 +61,7 @@ def callback_obs(msg):
 
 
 def main(args: argparse.Namespace):
+    print(args)
     global context_size
 
      # load model parameters
