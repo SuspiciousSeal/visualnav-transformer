@@ -1,0 +1,8 @@
+# camera parameters for src/gnm_locobot.launch v4l2-ctl --list-devices cmd to find video devices
+video_device: "/dev/video3" # change this to your video device path
+image_width: 1440
+image_height: 1440 
+# pixel_format: yuyv
+camera_frame_id: "usb_cam"
+# io_method: "mmap"
+framerate: 15
