@@ -1,5 +1,5 @@
 <launch>
-    <node name="rviz" pkg="rviz" type="rviz" args="-d /home/robert/nomad_thesis/visualnav-transformer/deployment/config/rviz/rviz_config.rviz" />
+   <!--  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/robert/nomad_thesis/visualnav-transformer/deployment/config/rviz/rviz_config.rviz" /> -->
 
     <!-- Manual control node launched from script-->
 
