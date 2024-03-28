@@ -1,8 +1,10 @@
 <launch>
+    <remap from="/usb_cam/image_raw" to="/camera/color/image_raw"/>
+    
     <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
-        <rosparam file="../config/camera_kodak.yaml" command="load" />
+        <rosparam file="../config/camera_kodak_jackal.yaml" command="load" />
     </node>
-    <node name="rviz" pkg="rviz" type="rviz" args="-d /home/robert/nomad_thesis/visualnav-transformer/deployment/config/rviz/rviz_config.rviz" />
+    <!--<node name="rviz" pkg="rviz" type="rviz" args="-d /home/robert/nomad_thesis/visualnav-transformer/deployment/config/rviz/rviz_config.rviz" />-->
 
     <!-- Manual control node launched from script-->
 
