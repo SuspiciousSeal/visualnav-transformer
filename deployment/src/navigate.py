@@ -114,6 +114,8 @@ def main(args: argparse.Namespace):
         IMAGE_TOPIC, Image, callback_obs, queue_size=1)
     waypoint_pub = rospy.Publisher(
         WAYPOINT_TOPIC, Float32MultiArray, queue_size=1)  
+    path_pub = rospy.Publisher(
+        "/nomad_path", Float32MultiArray, queue_size=1)  
     sampled_actions_pub = rospy.Publisher(SAMPLED_ACTIONS_TOPIC, Float32MultiArray, queue_size=1)
     goal_pub = rospy.Publisher("/topoplan/reached_goal", Bool, queue_size=1)
 
@@ -192,7 +194,14 @@ def main(args: argparse.Namespace):
                 print("published sampled actions")
                 sampled_actions_pub.publish(sampled_actions_msg)
                 naction = naction[0] 
+
+                path_msg = Float32MultiArray()
+                # print("naction", naction.shape, "\n", naction)
+                path_msg.data = naction.flatten()
+                path_pub.publish(path_msg)
+                
                 chosen_waypoint = naction[args.waypoint]
+                print(naction)
             elif (len(context_queue) > model_params["context_size"]):
                 start = max(closest_node - args.radius, 0)
                 end = min(closest_node + args.radius + 1, goal_node)

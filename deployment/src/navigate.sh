@@ -43,5 +43,6 @@ tmux send-keys "source ../../../catkin_ws/devel/setup.bash" Enter
 tmux send-keys "source ../../../rosvar.bash" Enter
 tmux send-keys "python pd_controller.py" Enter
 
+tmux select-pane -t 2
 # Attach to the tmux session
 tmux -2 attach-session -t $session_name
