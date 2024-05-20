@@ -1,3 +1,10 @@
+This repo was forked for my master's thesis
+
+
+
+#The following is from the original repository
+
+
 # General Navigation Models: GNM, ViNT and NoMaD
 
 **Contributors**: Dhruv Shah, Ajay Sridhar, Nitish Dashora, Catherine Glossop, Kyle Stachowicz, Arjun Bhorkar, Kevin Black, Noriaki Hirose, Sergey Levine
