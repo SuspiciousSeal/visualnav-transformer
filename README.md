@@ -2,7 +2,7 @@ This repo was forked for my master's thesis
 
 
 
-#The following is from the original repository
+# The following is from the original repository
 
 
 # General Navigation Models: GNM, ViNT and NoMaD
